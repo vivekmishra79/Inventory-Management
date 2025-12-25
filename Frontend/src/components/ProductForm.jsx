@@ -6,7 +6,7 @@ export default function Products() {
   const [form, setForm] = useState({ name: "", casNumber: "", unit: "KG" });
 
   const load = async () => {
-    const res = await API.get("/products");
+    const res = await API.get("api/products");
     setProducts(res.data.products);
   };
 
@@ -18,7 +18,7 @@ export default function Products() {
   };
 
   const remove = async (id) => {
-    await API.delete(`/products/${id}`);
+    await API.delete(`api/products/${id}`);
     load();
   };
 

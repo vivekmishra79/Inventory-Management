@@ -3,8 +3,8 @@ import API from "../Api/axios";
 import Navbar from "../components/Navbar";
 
 export default function Products() {
-  const [allProducts, setAllProducts] = useState([]); // 🔥 FULL DATA
-  const [products, setProducts] = useState([]);       // 🔍 FILTERED DATA
+  const [allProducts, setAllProducts] = useState([]); 
+  const [products, setProducts] = useState([]);       
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
@@ -21,7 +21,7 @@ export default function Products() {
   const loadProducts = async () => {
     try {
       setLoading(true);
-      const res = await API.get("/products");
+      const res = await API.get("api/products");
       const data = res.data.products || [];
       setAllProducts(data);
       setProducts(data); // default show all

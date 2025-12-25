@@ -3,7 +3,7 @@ import axios from "axios";
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://inventory-backend.onrender.com"+"api" // backend URL
+  baseURL: "https://inventory-backend.onrender.com", // backend URL
 });
 
 
