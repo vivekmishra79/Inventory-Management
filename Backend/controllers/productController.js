@@ -1,5 +1,5 @@
 const Product = require("../models/Product");
-const Inventory = require("../models/inventory");
+const inventory = require("../models/inventory");
 
 exports.createProduct = async (req, res) => {
   try {
@@ -21,7 +21,7 @@ exports.createProduct = async (req, res) => {
     }
 
     const product = await Product.create({ name, casNumber, unit });
-    await Inventory.create({ product: product._id });
+    await inventory.create({ product: product._id });
 
     res.status(201).json({
       success: true,
