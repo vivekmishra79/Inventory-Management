@@ -8,7 +8,7 @@ const inventoryRoutes = require("./routes/inventoryRoutes");
 const connectDB = require("./config/db");
 
 const app=express();
-const cors = require("cors");
+
 
 app.use(cors({
   origin: "https://inventory-managemen.netlify.app" 
