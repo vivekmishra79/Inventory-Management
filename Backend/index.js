@@ -15,11 +15,11 @@ app.use(cors({
 }));
 
 app.use(express.json());
-app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/auth", require("./routes/authRoutes"));
 
 
-app.use("/api/products", productRoutes);
-app.use("/api/inventory", inventoryRoutes);
+app.use("/products", productRoutes);
+app.use("/inventory", inventoryRoutes);
 
 connectDB();
 app.listen(process.env.PORT, () =>

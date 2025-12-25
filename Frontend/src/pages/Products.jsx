@@ -21,7 +21,7 @@ export default function Products() {
   const loadProducts = async () => {
     try {
       setLoading(true);
-      const res = await API.get("/api/products");
+      const res = await API.get("/products");
       const data = res.data.products || [];
       setAllProducts(data);
       setProducts(data); // default show all
