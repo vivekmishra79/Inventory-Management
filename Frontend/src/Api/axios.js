@@ -1,8 +1,12 @@
 import axios from "axios";
 
+import axios from "axios";
+
 const API = axios.create({
-  baseURL: "https://inventory-management-0szb.onrender.com",
+  baseURL: "https://inventory-backend.onrender.com", // backend URL
 });
+
+
 
 API.interceptors.request.use(
   (config) => {
