@@ -12,7 +12,7 @@ export default function Inventory() {
       setLoading(true);
       setError("");
 
-      const res = await API.get("/inventory");
+      const res = await API.get("api/inventory");
 
       const inventoryData = Array.isArray(res.data)
         ? res.data
